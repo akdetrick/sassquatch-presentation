@@ -1,5 +1,5 @@
 #!/bin/bash
 
-keydown generate deck
+keydown slides deck/slides.md
 
 exit 0
