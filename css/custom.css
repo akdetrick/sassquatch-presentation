@@ -2,6 +2,14 @@ hr {
 	border-color: rgba(255,255,255,0.25);
 }
 
+li {
+	margin-bottom: 1em !important;
+}
+li ol li,
+li ul li {
+	margin-bottom: 0 !important;
+}
+
 .align-left {
 	text-align: left;
 }
