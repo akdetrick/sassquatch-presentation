@@ -16,6 +16,7 @@
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -36,74 +37,76 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
+
+				<section data-background="#fff">
+					<img src="img/takashi_tweet.png" style="width: 100%; border-width: 0;" />
 				</section>
 
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
+				<section data-markdown>
+					<script type="text/template">
+						## Let's talk about botany for a minute
+					</script>
 				</section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+				<section data-background="#000">
+					<section data-markdown>
+						<script type="text/template">
+							## Strangler Vines
+
+							Tropical vines that grow on host trees
+
+							They eventually kill and replace the host tree
+						</script>
 					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
+					<section data-background="http://farm9.staticflickr.com/8205/8251868992_c9a35bf025_h.jpg" data-background-size="contain" data-background-transition="slide">
+						<p class="attribution">flickr/edrabbit</p>
 					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
+					<section data-background="http://farm4.staticflickr.com/3503/3828905896_e13528bbbf_b.jpg" data-background-size="contain" data-background-transition="slide">
+						<p class="attribution">flickr/nancybaym</p>
 					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
+					<section data-background="http://farm2.staticflickr.com/1040/956891083_ceba98c386_o.jpg" data-background-size="contain" data-background-transition="slide">
+						<p class="attribution">flickr/laughingface</p>
+					</section>
+					<section data-background="http://farm6.staticflickr.com/5018/5501316782_4be0a28ccf_b.jpg" data-background-size="contain" data-background-transition="slide">
+						<p class="attribution">flickr/anitagould</p>
 					</section>
 				</section>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
+				<section data-markdown>
+					<script type="text/template">
+						## The Strangler Pattern
+						As introduced by [Martin Fowler](http://martinfowler.com/bliki/StranglerApplication.html)
+					</script>
 				</section>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
+				<section data-markdown class="align-left">
+					<script type="text/template">
+						> ... create a new system around the edges of the old, letting it grow slowly over several years until the old system is strangled.
+					</script>
 				</section>
+
+				<section data-markdown class="align-left">
+					<script type="text/template">
+						> The most important reason to consider a strangler application over a cut-over rewrite is reduced risk.
+					</script>
+				</section>
+
+				<section data-markdown class="align-left">
+					<script type="text/template">
+						> ... when designing a new application you should design it in such a way as to make it easier for it to be strangled in the future. 
+
+						----
+
+						> Let's face it, all we are doing is writing tomorrow's legacy software today.
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## Strangling CSS
+					</script>
+				</section>
+
 
 				<section>
 					<h2>Works in Mobile Safari</h2>
@@ -364,9 +367,12 @@ function linkify( selector ) {
 				progress: true,
 				history: true,
 				center: true,
+				width: 1024,
+				margin: 0.05,
+				//previewLinks: true,
 
 				theme: "moon", // available themes are in /css/theme
-				transition: "linear", // default/cube/page/concave/zoom/linear/fade/none
+				transition: "concave", // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
