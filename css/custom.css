@@ -1,3 +1,6 @@
+h1,h2,h3,h4,h5,h6 {
+	margin-bottom: 1em !important;
+}
 hr {
 	border-color: rgba(255,255,255,0.25);
 }
@@ -23,4 +26,19 @@ li ul li {
 	background: rgba(0,0,0,0.4);
 	text-align: center;
 	font-family: "consolas", monospace !important;
+}
+
+.sq {
+	color: rgba(255,255,255,0.9) !important;
+}
+.sq h1,
+.sq h2,
+.sq h3,
+.sq h4,
+.sq h5,
+.sq h6 {
+	color: #fff !important;
+}
+.sq ::selection {
+	background-color: #000;
 }
