@@ -135,12 +135,15 @@
 						## Strangling CSS
 
 						"Seed" the top of your cascade with a new CSS foundation
+
+						TODO: really need a visual aid for this
 					</script>
 				</section>
 
 				<section>
 					<h3>Foundation?</h3>
 
+					TODO: could this use more images instead of text?
 					<ul>
 						<li class="fragment roll-in">
 							Custom "normalize" css
@@ -173,17 +176,6 @@
 
 				<section data-markdown>
 					<script type="text/template">
-						### Let the legacy CSS live
-
-						Legacy styles are downstream in the cascade.
-
-
-						You can launch your foundation without breaking everything.
-					</script>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
 						### Design + Code 4 eva
 						
 						_design_ for systems, not for pages
@@ -206,11 +198,34 @@
 					<script type="text/template">
 						### Element defaults
 
+						![type specimen](img/specimen.png)
+
 						``` css
-							h1 {
-								/* match to style tile */
+						$headingFontStack: 'Whitney', helvetica, arial, sans-serif;
+
+						h1,h2,h3,h4,h5,h6 {
+							font-family: $headingFontStack;
+							color: $C_textPrimary;
+							margin: 0;
+							padding: 0;
+							padding-bottom: $baseline/2;
+							line-height: 1.1;
+							font-weight: $W_bold;
+							.inverted & {
+								color: $C_textPrimaryInverted;
 							}
+						}
 						```
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Let the legacy CSS live
+
+						Legacy styles are downstream in the cascade.
+
+						You can launch your foundation without breaking everything.
 					</script>
 				</section>
 
