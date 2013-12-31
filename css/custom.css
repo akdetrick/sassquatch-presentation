@@ -13,6 +13,10 @@ li ul li {
 	margin-bottom: 0 !important;
 }
 
+p {
+	margin-bottom: 1em !important;
+}
+
 .align-left {
 	text-align: left;
 }
@@ -28,6 +32,43 @@ li ul li {
 	font-family: "consolas", monospace !important;
 }
 
+.figureset, .figureset-right {
+	*zoom: 1;
+}
+.figureset:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: ".";
+	clear: both;
+	height: 0;
+}
+.figureset-figure, .figureset-description {
+	display: table-cell;
+	vertical-align: top;
+}
+.figureset-figure {
+	width: 1%; /* ensure "shrink wrap" effect */
+	line-height: 0;
+}
+.figureset-description {
+	width: auto;
+	padding-left: 1em !important;
+	text-align: left !important;
+
+}
+.figureset-description:after {
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+	height: 0 !important;
+	line-height: 0;
+	font-size: 50px;
+	content: "M M M M M M M M M M M M M M M M M M M M ";
+	speak: none; /* STFU, screen readers. Don't read this. */
+}
+
+
 .sq {
 	color: rgba(255,255,255,0.9) !important;
 }
@@ -41,4 +82,28 @@ li ul li {
 }
 .sq ::selection {
 	background-color: #000;
+}
+
+/* reveal themes are too fucking specific */
+.reveal .document-figure {
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 6px;
+	padding: 12px !important;
+	padding-bottom: 0px !important;
+	width: 320px;
+	margin: 1em auto !important;
+	background: tranparent;
+}
+.reveal .document-line,
+.reveal .document-line--focus {
+	background-color: #268bd2;
+	font-size: 16px !important;
+	text-align: center;
+	margin-bottom: 12px !important;
+	line-height: 2;
+	color: #fff !important;
+	font-family: monaco, consolas, monospace !important;
+}
+.reveal .document-line--focus {
+	background-color: #d33682;
 }

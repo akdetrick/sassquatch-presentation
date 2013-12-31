@@ -46,14 +46,14 @@
 					</script>
 				</section>
 
-				<section data-markdown data-background="#444">
+				<section data-markdown data-background="#222">
 					<script type="text/template">
 						## Who/where intro
 						TK TODO
 					</script>
 				</section>
 
-				<section data-markdown data-background="#444">
+				<section data-markdown data-background="#222">
 					<script type="text/template">
 						## Meetup problems
 						TK TODO
@@ -130,48 +130,134 @@
 					</script>
 				</section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Strangling CSS
+				<section>
+					<h2>Strangling CSS</h2>
 
-						"Seed" the top of your cascade with a new CSS foundation
+					<p>"Seed" the top of your cascade with a new CSS foundation</p>
 
-						TODO: really need a visual aid for this
-					</script>
+					<div class="document-figure">
+						<div class="document-line--focus" style="line-height: 5;">New CSS Foundation</div>
+						<div class="document-line">legacy</div>
+						<div class="document-line">legacy</div>
+						<div class="document-line">legacy</div>
+						<div class="document-line">legacy</div>
+						<div class="document-line">legacy</div>
+						<div class="document-line">legacy</div>
+						<div class="document-line">legacy</div>
+					</div>
 				</section>
 
 				<section>
-					<h3>Foundation?</h3>
 
-					TODO: could this use more images instead of text?
-					<ul>
-						<li class="fragment roll-in">
-							Custom "normalize" css
-							<ul>
-								<li>handles element defaults, typography, etc.</li>
-							</ul>
-						</li>
-						<li class="fragment roll-in">
-							A basic layout system
-							<ul>
-								<li>susy, oocss grids, etc.</li>
-							</ul>
-						</li>
-						<li class="fragment roll-in">
-							<ul>
-								Common markup/style patterns
-								<li>media blocks, lists, etc.</li>
-							</ul>
-						</li>
-						<li class="fragment roll-in">
-							Modifiers
-							<ul>
-								<li>for nudging elements beyond default styles</li>
-								<li><code>.rounded-all</code></li>
-								<li><code>.wrap-nice</code></li>
-							</ul>
-						</li>
-					</ul>
+					<section data-transition="fade">
+						<div class="figureset">
+							<div class="figureset-figure document-figure">
+								<div class="document-line--focus" style="line-height: 23;">New CSS Foundation</div>
+							</div>
+							<div class="figureset-description">
+								<h3>Foundation?</h3>
+							</div>
+						</div>
+					</section>
+
+					<section data-transition="fade">
+						<div class="figureset">
+							<div class="figureset-figure document-figure">
+								<div class="document-line--focus" style="line-height: 4;">util (if pre-processing)</div>
+								<div class="document-line" style="line-height: 4;">element defaults</div>
+								<div class="document-line" style="line-height: 4;">layout system</div>
+								<div class="document-line" style="line-height: 4;">common patterns/components</div>
+								<div class="document-line" style="line-height: 4;">modifiers</div>
+							</div>
+							<div class="figureset-description">
+								<h4>Sass utilities</h4>
+								<p>vars, functions, etc.</p>
+							</div>
+						</div>
+					</section>
+
+					<section data-transition="fade">
+						<div class="figureset">
+							<div class="figureset-figure document-figure">
+								<div class="document-line" style="line-height: 4;">util (if pre-processing)</div>
+								<div class="document-line--focus" style="line-height: 4;">element defaults</div>
+								<div class="document-line" style="line-height: 4;">layout system</div>
+								<div class="document-line" style="line-height: 4;">common patterns/components</div>
+								<div class="document-line" style="line-height: 4;">modifiers</div>
+							</div>
+							<div class="figureset-description">
+								<h4>Custom "normalize" css</h4>
+								<p>handles element defaults, typography, etc.</p>
+							</div>
+						</div>
+					</section>
+
+					<section data-transition="fade">
+						<div class="figureset">
+							<div class="figureset-figure document-figure">
+								<div class="document-line" style="line-height: 4;">util (if pre-processing)</div>
+								<div class="document-line" style="line-height: 4;">element defaults</div>
+								<div class="document-line--focus" style="line-height: 4;">layout system</div>
+								<div class="document-line" style="line-height: 4;">common patterns/components</div>
+								<div class="document-line" style="line-height: 4;">modifiers</div>
+							</div>
+							<div class="figureset-description">
+								<h4>A basic layout system</h4>
+								<p>oocss grids, susy, etc.</p>
+							</div>
+						</div>
+					</section>
+
+					<section data-transition="fade">
+						<div class="figureset">
+							<div class="figureset-figure document-figure">
+								<div class="document-line" style="line-height: 4;">util (if pre-processing)</div>
+								<div class="document-line" style="line-height: 4;">element defaults</div>
+								<div class="document-line" style="line-height: 4;">layout system</div>
+								<div class="document-line--focus" style="line-height: 4;">common patterns/components</div>
+								<div class="document-line" style="line-height: 4;">modifiers</div>
+							</div>
+							<div class="figureset-description">
+								<h4>Common markup &amp; style patterns</h4>
+								<p>media blocks, special lists, etc.</p>
+							</div>
+						</div>
+					</section>
+
+					<section data-transition="fade">
+						<div class="figureset">
+							<div class="figureset-figure document-figure">
+								<div class="document-line" style="line-height: 4;">util (if pre-processing)</div>
+								<div class="document-line" style="line-height: 4;">element defaults</div>
+								<div class="document-line" style="line-height: 4;">layout system</div>
+								<div class="document-line" style="line-height: 4;">common patterns/components</div>
+								<div class="document-line--focus" style="line-height: 4;">modifiers</div>
+							</div>
+							<div class="figureset-description">
+								<h4>Modifier classes</h4>
+								<p>simple, standard styling helpers</p>
+
+								<hr />
+
+								<div data-markdown>
+									<script type="text/template">
+										``` css
+										.leading-top { padding-top: $spacing; }
+										```
+
+										``` css
+										.ellipsize {
+											display: block;
+											overflow: hidden;
+											text-overflow: ellipsis;
+											white-space: nowrap;
+										 }
+										```
+									</script>
+							</div>
+						</div>
+					</section>
+
 				</section>
 
 				<section data-markdown>
@@ -189,8 +275,7 @@
 
 				<section data-markdown>
 					<script type="text/template">
-						### Style tiles
-						TK TODO
+						### Style tiles / Type specimens
 					</script>
 				</section>
 
@@ -223,9 +308,10 @@
 					<script type="text/template">
 						### Let the legacy CSS live
 
-						Legacy styles are downstream in the cascade.
-
 						You can launch your foundation without breaking everything.
+
+						- Legacy styles are downstream in the cascade.
+						- Foundation styles are low-specicifity by design.
 					</script>
 				</section>
 
