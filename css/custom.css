@@ -17,6 +17,10 @@ p {
 	margin-bottom: 1em !important;
 }
 
+blockquote {
+	background: transparent !important;
+}
+
 .align-left {
 	text-align: left;
 }

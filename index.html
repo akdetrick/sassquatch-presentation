@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>deck</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -46,29 +46,53 @@
 					</script>
 				</section>
 
-				<section data-markdown data-background="#222">
-					<script type="text/template">
-						## Who/where intro
-						TK TODO
-					</script>
+				<section data-background="#222">
+					<h2>Hello!</h2>
+					<p>I'm Adam Detrick and I work for Meetup</p>
+					<p><a href="http://twitter.com/akdetrick">@akdetrick</a></p>
 				</section>
 
-				<section data-markdown data-background="#222">
-					<script type="text/template">
-						## Meetup problems
-						TK TODO
-
-						- meetup is over 10 years old
-						- ie css limit
-						- N ui engineers
-						- ~1000 jsp files
-						- ~180 scss files
-						- ~over 2000 instacnes of "color:" in compiled css
-					</script>
+				<section data-background="#666">
+					<h2>an opening thought...</h2>
 				</section>
 
 				<section data-background="#fff">
 					<img src="img/takashi_tweet.png" style="width: 100%; border-width: 0;" />
+				</section>
+
+				<section data-background="#222">
+					<h3>CSS problems at Meetup</h3>
+					<ul>
+						<li class="fragment">
+							meetup is over 10 years old
+							<ul>
+								<li class="fragment">~1000 jsp files</li>
+								<li class="fragment">~180 scss files</li>
+								<li class="fragment">~over 2000 instacnes of "color:" in compiled css</li>
+							</ul>
+						</li>
+						<li class="fragment">we kept hitting the css limit in internet explorer</li>
+						<li class="fragment">10 ui engineers</li>
+						<li class="fragment">we went years without dedicated designers</li>
+					</ul>
+				</section>
+
+				<section data-background="#222">
+					<h3>Some CSS problems are not<br />unique to Meetup</h3>
+					<ul>
+						<li class="fragment">design consistency</li>
+						<li class="fragment">reinventing solutions to problems that <br />have already been solved</li>
+						<li class="fragment"><a href="http://www.meetup.com/whats_new/">overly-specific</a> (and hard to reuse) CSS</li>
+						<li class="fragment">lack of a canonnical way to accomplish a given task</li>
+						<li class="fragment">existing code is hard to document</li>
+						<li class="fragment">unending cycle of code bloat</li>
+					</ul>
+				</section>
+
+				<section data-background="#222">
+					<h2>Starting clean is<br />not a solution</h2>
+
+					<p class="fragment">... and it's frustrating</p>
 				</section>
 
 				<section data-markdown>
@@ -82,7 +106,7 @@
 						<script type="text/template">
 							## Strangler Vines
 
-							Tropical vines that grow on host trees
+							Tropical plants that grow on host trees
 
 							They eventually kill and replace the host tree
 						</script>
@@ -110,24 +134,27 @@
 
 				<section data-markdown class="align-left">
 					<script type="text/template">
-						> ... create a new system around the edges of the old, letting it grow slowly over several years until the old system is strangled.
+						> "... create a new system around the edges of the old, letting it grow slowly over several years until the old system is strangled."
 					</script>
 				</section>
 
 				<section data-markdown class="align-left">
 					<script type="text/template">
-						> The most important reason to consider a strangler application over a cut-over rewrite is reduced risk.
+						> "The most important reason to consider a strangler application over a cut-over rewrite is reduced risk."
 					</script>
 				</section>
 
 				<section data-markdown class="align-left">
 					<script type="text/template">
-						> ... when designing a new application you should design it in such a way as to make it easier for it to be strangled in the future. 
+						> "... when designing a new application you should design it in such a way as to make it easier for it to be strangled in the future."
 
-						----
 
-						> Let's face it, all we are doing is writing tomorrow's legacy software today.
+						> "Let's face it, all we are doing is writing tomorrow's legacy software today."
 					</script>
+				</section>
+
+				<section>
+					<h2>What about CSS?</h2>
 				</section>
 
 				<section>
@@ -203,7 +230,7 @@
 							</div>
 							<div class="figureset-description">
 								<h4>A basic layout system</h4>
-								<p>oocss grids, susy, etc.</p>
+								<p>oocss grids, responsive grid system, susy, etc.</p>
 							</div>
 						</div>
 					</section>
@@ -220,6 +247,7 @@
 							<div class="figureset-description">
 								<h4>Common markup &amp; style patterns</h4>
 								<p>media blocks, special lists, etc.</p>
+								<p><em>ie. <a href="http://codepen.io/akdetrick/full/gltbd">figureset</a></em></p>
 							</div>
 						</div>
 					</section>
@@ -262,50 +290,6 @@
 
 				<section data-markdown>
 					<script type="text/template">
-						### Design + Code 4 eva
-						
-						_design_ for systems, not for pages
-
-						----
-
-						_code_ for systems, not for pages
-
-					</script>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						### Style tiles / Type specimens
-					</script>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						### Element defaults
-
-						![type specimen](img/specimen.png)
-
-						``` css
-						$headingFontStack: 'Whitney', helvetica, arial, sans-serif;
-
-						h1,h2,h3,h4,h5,h6 {
-							font-family: $headingFontStack;
-							color: $C_textPrimary;
-							margin: 0;
-							padding: 0;
-							padding-bottom: $baseline/2;
-							line-height: 1.1;
-							font-weight: $W_bold;
-							.inverted & {
-								color: $C_textPrimaryInverted;
-							}
-						}
-						```
-					</script>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
 						### Let the legacy CSS live
 
 						You can launch your foundation without breaking everything.
@@ -318,7 +302,7 @@
 				<section>
 					<section data-markdown data-transition="linear">
 						<script type="text/template">
-							### Strangling time
+							### Growing your strangler vines
 						</script>
 					</section>
 
@@ -376,7 +360,113 @@
 						```
 						</script>
 					</section>
+
+					<section data-transition="fade">
+						<h4>You're able to start deleting legacy CSS...</h4>
+						<div class="document-figure">
+							<div class="document-line" style="line-height: 5;">New CSS Foundation</div>
+							<div class="document-line">legacy</div>
+							<div class="document-line">legacy</div>
+							<div class="document-line">legacy</div>
+							<div class="document-line">legacy</div>
+							<div class="document-line">legacy</div>
+							<div class="document-line">legacy</div>
+							<div class="document-line--focus">deleted legacy component</div>
+						</div>
+					</section>
+
+					<section data-transition="fade">
+						<h4>As you repeat this process...</h4>
+						<div class="document-figure">
+							<div class="document-line" style="line-height: 5;">New CSS Foundation</div>
+							<div class="document-line">legacy</div>
+							<div class="document-line">legacy</div>
+							<div class="document-line">legacy</div>
+							<div class="document-line">legacy</div>
+							<div class="document-line--focus">deleted legacy component</div>
+						</div>
+					</section>
+
+					<section data-transition="fade">
+						<h4>More and more of the legacy CSS goes away...</h4>
+						<div class="document-figure">
+							<div class="document-line--focus" style="line-height: 5;">New CSS Foundation</div>
+							<div class="document-line">legacy</div>
+							<div class="document-line">legacy</div>
+							<div class="document-line--focus">deleted legacy component</div>
+						</div>
+					</section>
+
+					<section data-transition="fade">
+						<h4>Eventually leaving you with something more like this:</h4>
+						<div class="document-figure">
+							<div class="document-line--focus" style="line-height: 5;">New CSS Foundation</div>
+							<div class="document-line" style="line-height: 3;">Custom CSS</div>
+						</div>
+						<p class="fragment">(where "custom CSS" is page-specific or special cases your foundation doesn't cover)</p>
+					</section>
+
 				</section>
+
+				<section data-markdown data-background="#222">
+					<script type="tect/template">
+						## Building the foundation
+					</script>
+				</section>
+
+				<section data-markdown data-background="#222">
+					<script type="text/template">
+						### Design + Code 4 eva
+						
+						_design_ for systems, not for pages
+
+						----
+
+						_code_ for systems, not for pages
+
+						---
+
+						Paraphrased from Dale Sande:
+
+						> "work from the outside in"
+					</script>
+				</section>
+
+				<section data-markdown data-background="#222">
+					<script type="text/template">
+						### Style tiles
+
+						[http://styletil.es/](http://styletil.es/)
+
+						![style tile](img/shane.png)
+					</script>
+				</section>
+
+				<section data-markdown data-background="#222">
+					<script type="text/template">
+						### Element defaults
+
+						![type specimen](img/specimen.png)
+
+						``` css
+						$headingFontStack: 'Whitney', helvetica, arial, sans-serif;
+
+						h1,h2,h3,h4,h5,h6 {
+							font-family: $headingFontStack;
+							color: $C_textPrimary;
+							margin: 0;
+							padding: 0;
+							padding-bottom: $baseline/2;
+							line-height: 1.1;
+							font-weight: $W_bold;
+							.inverted & {
+								color: $C_textPrimaryInverted;
+							}
+						}
+						```
+					</script>
+				</section>
+
 
 				<section data-markdown data-background="#9f1627" class="sq">
 					<script type="text/template">
@@ -386,10 +476,52 @@
 
 				<section data-markdown data-background="#9f1627" class="sq">
 					<script type="text/template">
-						### A CSS foundation/framework for Meetup
+						### A CSS foundation for Meetup
 
 						(we use this as our strangler vine)
 					</script>
+				</section>
+
+				<section>
+					<h3><a href="http://meetup.github.io/sassquatch/">Demo</a> Time</h3>
+				</section>
+
+				<section>
+					<h3>Let's look at some <a href="https://github.com/meetup/sassquatch">Code</a></h3>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Killing 300kb of CSS,<br />one page at a time
+
+						``` jsp
+							<jsp:param name="isModernLayout" value="${true}" />
+						```
+						 -----
+
+						 ``` jsp
+						 <c:choose>
+							 <c:when test="${not empty param.isModernLayout}">
+								 <c:set var="mainStylesheetPath" value="/style/meetup-modern.css" />
+							 </c:when>
+							 <c:otherwise>
+								 <c:set var="mainStylesheetPath" value="/style/meetup.css" />
+							 </c:otherwise>
+						 </c:choose>
+						 ```
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Added bonus
+
+						Sassquatch consolidated domain-specific knowledge
+					</script>
+				</section>
+
+				<section>
+					<h1>Thanks!</h1>
 				</section>
 
 			</div>
@@ -410,7 +542,7 @@
 				center: true,
 				width: 1024,
 				margin: 0.05,
-				//previewLinks: true,
+				previewLinks: true,
 
 				theme: "moon", // available themes are in /css/theme
 				transition: "concave", // default/cube/page/concave/zoom/linear/fade/none
