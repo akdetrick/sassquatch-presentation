@@ -1,5 +1,11 @@
+.reveal {
+	font-family: "Whitney", sans-serif !important;
+	font-weight: 400 !important;
+}
 h1,h2,h3,h4,h5,h6 {
 	margin-bottom: 0.75em !important;
+	font-family: "Whitney", sans-serif !important;
+	font-weight: 700 !important;
 }
 hr {
 	border-color: rgba(255,255,255,0.25);
