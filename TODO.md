@@ -1,7 +1,6 @@
 # TODO
 
 - [1] meetup bg
-- [4] clarify ui engineer number
 - [4:5] lead into "starting clean is not a solution" with TSC story
 - [12:13] insert slides explaining why CSS is a perfect candidate for strangulation
 	- cascade & specificity
